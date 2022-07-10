@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+    width: 180px;
+    min-height: 100vh;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+.sidebar-top, .sidebar-center, .sidebar-bottom {
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4b4b4b;
+}
+.sidebar-bottom {
+    border: none;
+    align-items: center;
+    justify-content: center; /* to center it horizontally */
+    transition: all 1s ease;
+}
+.logo {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.brand {
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.list-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+li>i {
+     width: 30px;
+     font-size: 20px;
+     transition: all 1s ease;
+}
+.list-item:hover,
+.list-item.active {
+    background-color: #374151;
+    color: white;
+}
+
+.color-box {
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(202, 191, 191);
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.dark {
+    background-color: #111827;
+}
+.night {
+    background-color: #312e81;
+}
+.light {
+    background-color: #f3f4f6;
+    
+}
+
+
+.sidebar.night {
+    background-color: #312e81;
+    color: #b4bbc7;
+}
+.list-item.active.night {
+    background-color: #4338ca;
+}
+
+.sidebar.light {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+.list-item.active.light {
+    background-color: #d1d5db;
+    color: #111827;
+}
+
+.sidebar.dark {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+.list-item.active.dark {
+    background-color: #d1d5db;
+    color: #111827;
+}
+
+
+@media only screen and (max-width: 768px){
+    .sidebar {
+        width: 50px;
+    }
+    .brand, .list-item>span {
+        display: none;
+    }
+    .sidebar-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .color-box {
+        width: 18px;
+        height: 18px;
+        margin: 3px 0;
+    }
+
+}
